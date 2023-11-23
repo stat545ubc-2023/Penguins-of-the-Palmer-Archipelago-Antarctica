@@ -1,0 +1,10 @@
+name: palmer_archipelago_penguins
+title:
+username: hgordon
+account: hgordon
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10614277
+bundleId: 7962999
+url: https://hgordon.shinyapps.io/palmer_archipelago_penguins/
+version: 1
