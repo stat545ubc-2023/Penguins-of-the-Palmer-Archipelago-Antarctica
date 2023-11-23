@@ -17,7 +17,7 @@ yvars <- c("Flipper length (mm)" = "flipper_length_mm",
 # Define UI for application 
 ui <- fluidPage(
 
-# FEATURE
+# FEATURE1
 # Change the theme to a bootstrap theme "Cerulean" to make the app more colourful
 # This makes the app more visually interesting for the user
   bootstrapPage(
@@ -45,12 +45,12 @@ ui <- fluidPage(
     navbarPage(
       title = "Penguins of the Palmer Archipelago, Antarctica",
       
-# FEATURE
+# FEATURE2
 # Create a tabset that contains tabPanel elements, which are useful for dividing the app outputs into multiple independently viewable sections
 # This makes the app more organized and easier for a user to navigate
       tabsetPanel(
         
-# FEATURE
+# FEATURE3
 # Add an image to the first tab, called Species, with an image of the three penguin species found on the Palmer Archipelago
 # This provides useful context for the user in the form of a visual image comparison of the three species
         tabPanel("Species", 
@@ -78,7 +78,7 @@ ui <- fluidPage(
                        ),
                        tags$figcaption("Graphics by Julian Avila-Jimenez")))),
 
-# FEATURE
+# FEATURE4
 # Add a tab containing a plot allowing the user to explore body size measurements interactively
 # Drop-down menu to select the input for the y-axis variable using selectInput. This allows the user to plot the variable of interest to them
 # Scatterplot output using plotly, which creates interactive plots, allowing the user to select/de-select data, zoom, download an image of the plot, etc.
@@ -89,7 +89,7 @@ ui <- fluidPage(
                      verbatimTextOutput("info"),
                 plotlyOutput("scatterplot")), 
 
-# FEATURE
+# FEATURE5
 # Add a tab containing an interactive table using data table output (DTOutput)
 # The data table contains a search bar, number of entries per page, and each variable can be arranged by size or name
 # Add a drop-down menu with selectInput to allow the user to select a species of interest
@@ -129,7 +129,7 @@ server <- function(input, output) {
 # Print the plot  
   print(ggplotly(p)) 
 
-# FEATURE
+# FEATURE6
 # Add an event_register function that will enable click events
 # This means when a user clicks on a data point on the plot, they will be able to see the data associated with that point
 # Continued below with renderText function
