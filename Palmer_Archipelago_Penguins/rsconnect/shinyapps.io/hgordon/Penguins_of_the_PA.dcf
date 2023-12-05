@@ -1,0 +1,12 @@
+name: Penguins_of_the_PA
+title: Penguins_of_the_PA
+username: hgordon
+account: hgordon
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10727596
+bundleId: 8012393
+url: https://hgordon.shinyapps.io/Penguins_of_the_PA/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
