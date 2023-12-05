@@ -6,9 +6,7 @@ Last updated: 5 December 2023
 
 Link to updated version of the app: [Penguins of the Palmer Archipelago](https://hgordon.shinyapps.io/Penguins_of_the_PA/)  
 
-Link to the original app:  [Penguins of the Palmer Archipelago, Antarctica](https://hgordon.shinyapps.io/palmer_archipelago_penguins/)  
-
-
+Link to the original app:  [Penguins of the Palmer Archipelago, Antarctica](https://hgordon.shinyapps.io/palmer_archipelago_penguins/) 
 
 
 **|| App description** 
