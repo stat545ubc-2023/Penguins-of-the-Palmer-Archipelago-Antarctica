@@ -71,10 +71,10 @@ ui <- fluidPage(
                               tags$figure(
                                 tags$img(
                                   src = "penguins.png",
-                                  width = 600,
+                                  width = 700,
                                   alt = "Picture of Palmer Archipelago penguin species"
                                 ),
-                                tags$figcaption("Artwork by @allison_horst")
+                                tags$figcaption(style = "text-align: center; margin-top: 10px;","Artwork by @allison_horst")
                               )
                           ),
                           verbatimTextOutput("summary")),
@@ -126,16 +126,17 @@ ui <- fluidPage(
       tabPanel("Palmer Archipelago", 
                tags$div(
                  style = "text-align: center;", # Center-align the content
-                 p(HTML("Click on the buttons below to view the the images")),
+                 p(HTML("Click on the buttons below to view a map of the islands and a photo from the archipelago")),
                  actionButton("showImage1", "Nesting islands"),
                  actionButton("showImage2", "Photo of the region")),     
                
                # Placeholder for the displayed image
+               div(class = "center-image",
                tags$div(
                  id = "imageDiv", # Set an ID for the div
                  style = "margin-top: 20px;", # Adding margin above the image
                  uiOutput("imageDisplay")
-               )),
+               ))),
       
       
       # FEATURE
@@ -155,7 +156,7 @@ ui <- fluidPage(
       # Add a drop-down menu with selectInput to allow the user to select a species of interest
       # Add check boxes with checkboxGroupInput to allow the user to select one or more islands of interest
       # All of these together provide the user with many options for customizing the data table to the variables they are interested in
-      tabPanel("Tables", h3(HTML("<b>Explore the penguins dataset</b>")), p("Choose a species and one or more islands to view the corresponding data table."),
+      tabPanel("Data tables", h3(HTML("<b>Explore the penguins dataset</b>")), p("Choose a species and one or more islands to view the corresponding data table."),
                selectInput("penguinsp", "Species",  choices= unique(penguins$species)),
                checkboxGroupInput("islands", "Island",
                                   choices = unique(penguins$island), selected="Torgersen",
@@ -168,21 +169,27 @@ ui <- fluidPage(
 
 # Define server logic 
 server <- function(input, output) {
+  
   # Function to render images based on button clicks
   observeEvent(input$showImage1, {
     output$imageDisplay <- renderUI({
-      image1 <- tags$img(src = "palmer_archipelago.png", width = "600")
-      # Replace "path_to_image_1.jpg" with the actual path or URL of your image file
-      # Set the width and height as desired
-      image1
-    })
+      image1 <-  tags$div(
+        tags$figure(
+        tags$img(src = "palmer_archipelago.png", width = "700"),
+        tags$figcaption(style = "text-align: center; margin-top: 10px;",
+          "Graphics by Julian Avila-Jimenez")
+        ))
+        image1
   })
-  
+})
   observeEvent(input$showImage2, {
     output$imageDisplay <- renderUI({
-      image2 <- tags$img(src = "p_archipelago_photo.png", width = "700", height = "300")
-      # Replace "path_to_image_2.jpg" with the actual path or URL of your image file
-      # Set the width and height as desired
+      image2 <- tags$div(
+        tags$figure(
+        tags$img(src = "p_archipelago_photo.png", width = "700", height = "300"),
+        tags$figcaption(style = "text-align: center; margin-top: 10px;",
+          "Photo from Holland America")
+        ))
       image2
     })
   })
