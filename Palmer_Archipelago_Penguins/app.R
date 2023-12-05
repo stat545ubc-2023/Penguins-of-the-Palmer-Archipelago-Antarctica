@@ -51,9 +51,9 @@ ui <- fluidPage(
   navbarPage(
     title = "Penguins of the Palmer Archipelago, Antarctica",
     
-    # NEW FEATURE 1
-    # Create a NAVLIST panel that contains tabPanel elements, which are useful for dividing the app outputs into multiple independently viewable sections
-    # This makes the app more organized and easier for a user to navigate
+# NEW FEATURE 1
+# Create a NAVLIST panel that contains tabPanel elements, which are useful for dividing the app outputs into multiple independently viewable sections
+# This makes the app more organized and easier for a user to navigate
     navlistPanel(
       id = "tabset",
       "Learn about penguins!",
@@ -78,9 +78,9 @@ ui <- fluidPage(
                               )
                           ),
                           verbatimTextOutput("summary")),
-                 # NEW FEATURE 2
-                 # Add tabs within the species page, one for each species
-                 # Include information about each species and embed a video
+# NEW FEATURE 2
+# Add tabs within the species page, one for each species
+# Include information about each species and embed a video
                  
                  # Content for Chinstrap species tab  
                  tabPanel("Chinstrap",
@@ -118,11 +118,11 @@ ui <- fluidPage(
                  )
                )), 
       
-      # Add another tab called Palmer Archipelago 
-      # NEW FEATURE 3
-      # Add two actions buttons, that will display a map of the region and a photo of the archipelago
-      # The three islands where the penguins nest are labelled on this map, providing spatial context for the user
-      # A photo of the Palmer Archipelago provides an image of the area for the user to better visualize the landscape
+# Add another tab called Palmer Archipelago 
+# NEW FEATURE 3
+# Add two actions buttons, that will display a map of the region and a photo of the archipelago
+# The three islands where the penguins nest are labelled on this map, providing spatial context for the user
+# A photo of the Palmer Archipelago provides an image of the area for the user to better visualize the landscape
       tabPanel("Palmer Archipelago", 
                tags$div(
                  style = "text-align: center;", # Center-align the content
